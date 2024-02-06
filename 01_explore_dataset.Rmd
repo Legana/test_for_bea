@@ -20,3 +20,16 @@ library(palmerpenguins)
 glimpse(penguins)
 ```
 
+```{r}
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, colour = sex)) +
+  geom_point() +
+  facet_wrap(~species) +
+  labs(x = "Flipper length (mm)", y = "Body mass (g)") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+```
+
+```{r}
+ggsave("figures/01_penguin_size_sex.png", width = 8, height = 6)
+```
+

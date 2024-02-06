@@ -22,3 +22,22 @@ glimpse(penguins)
     ## $ body_mass_g       <int> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
     ## $ sex               <fct> male, female, female, NA, female, male, female, male…
     ## $ year              <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…
+
+``` r
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, colour = sex)) +
+  geom_point() +
+  facet_wrap(~species) +
+  labs(x = "Flipper length (mm)", y = "Body mass (g)") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+```
+
+    ## Warning: Removed 2 rows containing missing values (`geom_point()`).
+
+![](01_explore_dataset_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+``` r
+ggsave("figures/01_penguin_size_sex.png", width = 8, height = 6)
+```
+
+    ## Warning: Removed 2 rows containing missing values (`geom_point()`).
