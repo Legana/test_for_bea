@@ -1,5 +1,5 @@
 ---
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -9,3 +9,5 @@ knitr::opts_chunk$set(echo = TRUE)
 # README
 
 This is a test :construction: 
+
+- [Initial looksie](01_explore_dataset.md): Rmd: [01_explore_dataset.Rmd](01_explore_dataset.Rmd)
